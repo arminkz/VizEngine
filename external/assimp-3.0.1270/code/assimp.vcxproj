@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{F68615DF-E041-390E-809A-4A0CC870571A}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>assimp</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+ <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+ <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+ <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+ <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\Debug\</OutDir>
+     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">assimp.dir\Debug\</IntDir>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">assimp</TargetName>
+     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\Release\</OutDir>
+     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">assimp.dir\Release\</IntDir>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">assimp</TargetName>
+     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\MinSizeRel\</OutDir>
+     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">assimp.dir\MinSizeRel\</IntDir>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">assimp</TargetName>
+     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\RelWithDebInfo\</OutDir>
+     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">assimp.dir\RelWithDebInfo\</IntDir>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">assimp</TargetName>
+     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+ <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+ <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+ <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+ <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_WINDOWS;ASSIMP_BUILD_BOOST_WORKAROUND;ASSIMP_BUILD_DLL_EXPORT;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glfw-3.1.2\include\GLFW;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\glew-1.13.0\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\AntTweakBar-1.16\include;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\..\contrib\unzip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt">
+     <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt</Message>
+     <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Desktop/ogl-OpenGL-tutorial_0015_33 -BD:/Desktop/OpenGL_Build --check-stamp-file D:/Desktop/OpenGL_Build/external/assimp-3.0.1270/code/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+     <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+     <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\CMakeFiles\generate.stamp</Outputs>
+     <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+     <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt</Message>
+     <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Desktop/ogl-OpenGL-tutorial_0015_33 -BD:/Desktop/OpenGL_Build --check-stamp-file D:/Desktop/OpenGL_Build/external/assimp-3.0.1270/code/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+     <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+     <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\CMakeFiles\generate.stamp</Outputs>
+     <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+     <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt</Message>
+     <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Desktop/ogl-OpenGL-tutorial_0015_33 -BD:/Desktop/OpenGL_Build --check-stamp-file D:/Desktop/OpenGL_Build/external/assimp-3.0.1270/code/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+     <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+     <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\CMakeFiles\generate.stamp</Outputs>
+     <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+     <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt</Message>
+     <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Desktop/ogl-OpenGL-tutorial_0015_33 -BD:/Desktop/OpenGL_Build --check-stamp-file D:/Desktop/OpenGL_Build/external/assimp-3.0.1270/code/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+     <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Desktop/ogl-OpenGL-tutorial_0015_33/external/assimp-3.0.1270/code/CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+     <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\code\CMakeFiles\generate.stamp</Outputs>
+     <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\AssimpPCH.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\fast_atof.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\qnan.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BaseImporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BaseProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Importer.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ScenePrivate.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ByteSwap.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DefaultProgressHandler.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DefaultIOStream.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DefaultIOSystem.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CInterfaceIOWrapper.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Hash.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFF.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ParsingUtils.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\StdOStreamLogStream.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\StreamReader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\StringComparison.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SGSpatialSort.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\VertexTriangleAdjacency.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\GenericProperty.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SpatialSort.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SceneCombiner.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ScenePreprocessor.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SkeletonMeshBuilder.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SplitByBoneCountProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SmoothingGroups.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\StandardShapes.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TargetAnimation.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RemoveComments.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Subdivision.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Vertex.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LineSplitter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TinyFormatter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Profiler.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LogAux.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\IOStream.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\LogStream.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\Logger.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\NullLogger.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Win32DebugLogStream.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FileLogStream.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlobIOSystem.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CalcTangentsProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ComputeUVMappingProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ConvertToLHProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FindDegenerates.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FindInstancesProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FindInvalidDataProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FixNormalsStep.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\GenFaceNormalsProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\GenVertexNormalsProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PretransformVertices.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ImproveCacheLocality.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\JoinVerticesProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RemoveRedundantMaterials.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RemoveVCProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SortByPTypeProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SplitLargeMeshes.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TerragenLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TextureTransform.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TriangulateProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ValidateDataStructure.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OptimizeGraph.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OptimizeMeshes.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DeboneProcess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ProcessHelper.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PolyTools.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MakeVerboseFormat.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\3DSHelper.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\3DSLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ACLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ASELoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ASEParser.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\B3DImporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BVHLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ColladaHelper.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ColladaLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ColladaParser.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ColladaExporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DXFLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DXFHelper.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CSMLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\HMPFileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\HMPLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\HalfLifeFileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IRRLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IRRMeshLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IRRShared.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWOAnimation.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWOFileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWOLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWSLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\M3Importer.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD2FileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD2Loader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD2NormalTable.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD3FileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD3Loader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD5Loader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD5Parser.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDCFileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDCLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDCNormalTable.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDLDefaultColorMap.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDLFileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDLLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MaterialSystem.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\NFFLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OFFLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjFileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjFileImporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjFileMtlImporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjFileParser.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjTools.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjExporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OgreImporter.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OgreXmlHelper.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PlyLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PlyParser.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PlyExporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3DLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3BSPFileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3BSPFileParser.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3BSPFileImporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3BSPZipArchive.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RawLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SMDLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\STLLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\STLExporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\UnrealLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\XFileHelper.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\XFileImporter.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\XFileParser.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD4FileData.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MS3DLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\COBLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\COBScene.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderDNA.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderDNA.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderScene.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderSceneGen.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderIntermediate.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderModifier.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\NDOLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCReaderGen.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCUtil.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\STEPFile.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\STEPFileReader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\XGLLoader.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\irrXMLWrapper.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\irrXML\CXMLReaderImpl.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\irrXML\heapsort.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\irrXML\irrArray.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\irrXML\irrString.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\irrXML\irrTypes.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\irrXML\irrXML.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\unzip\crypt.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\unzip\ioapi.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\unzip\unzip.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\utils.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\clipper\clipper.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\math\common_factor_rt.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\foreach.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\format.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_array.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_ptr.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_array.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_ptr.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\make_shared.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\static_assert.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BoostWorkaround\boost\tuple\tuple.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\anim.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\ai_assert.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\camera.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\color4.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\color4.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\config.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\defs.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\cfileio.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\light.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\material.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\material.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\matrix3x3.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\matrix3x3.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\matrix4x4.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\matrix4x4.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\mesh.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\postprocess.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\quaternion.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\quaternion.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\scene.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\texture.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\types.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\vector2.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\vector2.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\vector3.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\vector3.inl" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\version.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\cimport.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\importerdesc.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\Importer.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\ProgressHandler.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\IOSystem.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\cexport.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\Exporter.hpp" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\Compiler\pushpack1.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\include\assimp\Compiler\poppack1.h" />
+    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\pstdint.h" />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Assimp.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\AssimpPCH.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BaseImporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BaseProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PostStepRegistry.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ImporterRegistry.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DefaultIOStream.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DefaultIOSystem.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Importer.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SGSpatialSort.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\VertexTriangleAdjacency.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SpatialSort.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SceneCombiner.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ScenePreprocessor.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SkeletonMeshBuilder.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SplitByBoneCountProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\StandardShapes.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TargetAnimation.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RemoveComments.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Subdivision.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DefaultLogger.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Exporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\AssimpCExport.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CalcTangentsProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ComputeUVMappingProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ConvertToLHProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FindDegenerates.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FindInstancesProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FindInvalidDataProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\FixNormalsStep.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\GenFaceNormalsProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\GenVertexNormalsProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PretransformVertices.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ImproveCacheLocality.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\JoinVerticesProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RemoveRedundantMaterials.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RemoveVCProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SortByPTypeProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SplitLargeMeshes.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TerragenLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TextureTransform.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\TriangulateProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ValidateDataStructure.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OptimizeGraph.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OptimizeMeshes.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DeboneProcess.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ProcessHelper.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MakeVerboseFormat.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\3DSConverter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\3DSLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ACLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ASELoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ASEParser.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\B3DImporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BVHLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ColladaLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ColladaParser.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ColladaExporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\DXFLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\CSMLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\HMPLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IRRLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IRRMeshLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IRRShared.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWOAnimation.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWOBLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWOLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWOMaterial.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\LWSLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\M3Importer.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD2Loader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD3Loader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD5Loader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MD5Parser.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDCLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDLLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MDLMaterialLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MaterialSystem.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\NFFLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OFFLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjFileImporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjFileMtlImporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjFileParser.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\ObjExporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OgreImporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OgreMaterial.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OgreMesh.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\OgreSkeleton.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PlyLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PlyParser.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\PlyExporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3DLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3BSPFileParser.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3BSPFileImporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\Q3BSPZipArchive.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\RawLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\SMDLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\STLLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\STLExporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\UnrealLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\XFileImporter.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\XFileParser.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\MS3DLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\COBLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderDNA.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderScene.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\BlenderModifier.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\NDOLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCReaderGen.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCUtil.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCGeometry.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCMaterial.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCProfile.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\IFCCurve.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\STEPFileReader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\code\XGLLoader.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\irrXML\irrXML.cpp"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\unzip\ioapi.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\unzip\unzip.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.cc"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.cc"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.cc"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.cc"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.cc"  />
+    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\external\assimp-3.0.1270\contrib\clipper\clipper.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Desktop\OpenGL_Build\ZERO_CHECK.vcxproj">
+      <Project>FB9D5F07-2105-3837-9CCB-A9AC87A93B34</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\OpenGL_Build\external\assimp-3.0.1270\contrib\zlib\zlib.vcxproj">
+      <Project>D6A74FB6-41B8-3E2A-8690-94C3F68B9AD4</Project>
+      <Name>zlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
