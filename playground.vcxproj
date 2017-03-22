@@ -376,11 +376,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\common\shader.hpp" />
-    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\playground\playground.cpp" />
-    <ClCompile Include="D:\Desktop\ogl-OpenGL-tutorial_0015_33\common\shader.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="D:\Desktop\OpenGL_Build\ZERO_CHECK.vcxproj">
       <Project>FB9D5F07-2105-3837-9CCB-A9AC87A93B34</Project>
       <Name>ZERO_CHECK</Name>
@@ -389,6 +384,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>0F56D75C-DE34-38EE-8E01-DD42E0E111BE</Project>
       <Name>glfw</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="playground\playground.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
