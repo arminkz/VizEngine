@@ -44,7 +44,7 @@ int main()
 	glViewport(0, 0, WIDTH, HEIGHT);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint shaderProgram = LoadShaders("uniform_test_vert.glsl", "sea.glsl");
+	GLuint shaderProgram = LoadShaders("uniform_test_vert.glsl", "mandelbrot.glsl");
 	fprintf(stdout, "Loaded Shader !\n");
 
 	// Set up vertex data (and buffer(s)) and attribute pointers

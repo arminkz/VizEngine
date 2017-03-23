@@ -1,5 +1,8 @@
 #version 330 core
 
+uniform vec3 iResolution;
+uniform float iGlobalTime;
+
 #define AA 2
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
@@ -63,4 +66,9 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 	col /= float(AA*AA);
     
 	fragColor = vec4( col, 1.0 );
+}
+
+
+void main(){
+	mainImage(gl_FragColor,gl_FragCoord.xy);
 }
