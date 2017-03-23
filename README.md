@@ -7,4 +7,8 @@ here is an example for Pixel Shader functionality :
 
 starnest.glsl
 
-![Alt text](/../master/screenshot/vizengine1.gif?raw=true "Pixel Shader")
+![Alt text](/../master/screenshot/starnest.png?raw=true "Starnest")
+
+sea.glsl
+
+![Alt text](/../master/screenshot/sea.png?raw=true "Ocean")
