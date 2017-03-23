@@ -15,7 +15,7 @@
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 // Window dimensions
-const GLuint WIDTH = 1280, HEIGHT = 720;
+const GLuint WIDTH = 640, HEIGHT = 360;
 
 // The MAIN function, from here we start the application and run the game loop
 int main()
