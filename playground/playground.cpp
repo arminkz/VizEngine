@@ -1,113 +1,124 @@
-// Include standard headers
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <cmath>
 
-// Include GLEW. Always include it before gl.h and glfw.h, since it's a bit magic.
+// GLEW
+#define GLEW_STATIC
 #include <GL/glew.h>
 
-//Include GLFW 3.2
+// GLFW
 #include <glfw3.h>
-
-//Include GLM
-#include <glm/glm.hpp>
-using namespace glm;
 
 #include <common/shader.hpp>
 
-GLFWwindow* window;
 
-int main() {
+// Function prototypes
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
-	fprintf(stdout, "VizEngine 0.1 \n");
-	fprintf(stdout, "-----------------------\n\n");
+// Window dimensions
+const GLuint WIDTH = 1280, HEIGHT = 720;
 
-	// Initialise GLFW
-	if (!glfwInit())
-	{
-		fprintf(stderr, "Failed to initialize GLFW\n");
-		return -1;
-	}
-
-	glfwWindowHint(GLFW_SAMPLES, 4); // 4x antialiasing
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // We want OpenGL 3.3
+// The MAIN function, from here we start the application and run the game loop
+int main()
+{
+	// Init GLFW
+	glfwInit();
+	// Set all the required options for GLFW
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL 
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	// Open a window and create its OpenGL context
-	window = glfwCreateWindow(1024, 768, "VizEngine Playground v0.1", NULL, NULL);
-	if (window == NULL) {
-		fprintf(stderr, "Failed to open GLFW window.\nIf you have an Intel GPU, they are not 3.3 compatible. Try OpenGL 2.2\n");
-		glfwTerminate();
-		return -1;
-	}
+	// Create a GLFWwindow object that we can use for GLFW's functions
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "VizEngine Playground 0.1", nullptr, nullptr);
+	glfwMakeContextCurrent(window);
 
-	glfwMakeContextCurrent(window); // Initialize GLEW
-	glewExperimental = true; // Needed in core profile
-	if (glewInit() != GLEW_OK) {
-		fprintf(stderr, "Failed to initialize GLEW\n");
-		return -1;
-	}
+	// Set the required callback functions
+	glfwSetKeyCallback(window, key_callback);
 
-	
-	fprintf(stdout, "Initialized Successfully !\n");
+	// Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
+	glewExperimental = GL_TRUE;
+	// Initialize GLEW to setup the OpenGL Function pointers
+	glewInit();
 
-	// Ensure we can capture the escape key being pressed below
-	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
-
-	//VAO (Vertex Array Object) Definition
-	GLuint VertexArrayID;
-	glGenVertexArrays(1, &VertexArrayID);
-	glBindVertexArray(VertexArrayID);
-
-	//triangle vertices
-	static const GLfloat g_vertex_buffer_data[] = {
-		-1.0f, -1.0f, 0.0f,
-		1.0f, -1.0f, 0.0f,
-		0.0f,  1.0f, 0.0f,
-	};
-
-	// This will identify our vertex buffer
-	GLuint vertexbuffer;
-	// Generate 1 buffer, put the resulting identifier in vertexbuffer
-	glGenBuffers(1, &vertexbuffer);
-	// The following commands will talk about our 'vertexbuffer' buffer
-	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
-	// Give our vertices to OpenGL.
-	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+	// Define the viewport dimensions
+	glViewport(0, 0, WIDTH, HEIGHT);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders("simple_red_vertex.glsl", "simple_red_frag.glsl");
+	GLuint shaderProgram = LoadShaders("uniform_test_vert.glsl", "starnest.glsl");
 	fprintf(stdout, "Loaded Shader !\n");
 
-	//MAIN LOOP
-	// Check if the ESC key was pressed or the window was closed
-	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
-		glfwWindowShouldClose(window) == 0) {
-		// Draw
+	// Set up vertex data (and buffer(s)) and attribute pointers
+	GLfloat vertices[] = {
+		// Positions        
+		-1.0f, -1.0f, 0.0f,
+		-1.0f, 1.0f, 0.0f,  
+		1.0f,  -1.0f, 0.0f,
+		-1.0f, 1.0f, 0.0f,
+		1.0f,  -1.0f, 0.0f,
+		1.0f, 1.0f, 0.0f
+	};
+	GLuint VBO, VAO;
+	glGenVertexArrays(1, &VAO);
+	glGenBuffers(1, &VBO);
+	// Bind the Vertex Array Object first, then bind and set vertex buffer(s) and attribute pointer(s).
+	glBindVertexArray(VAO);
 
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		glUseProgram(programID);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-		// 1st attribute buffer : vertices
-		glEnableVertexAttribArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
-		glVertexAttribPointer(
-			0,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
-			3,                  // size
-			GL_FLOAT,           // type
-			GL_FALSE,           // normalized?
-			0,                  // stride
-			(void*)0            // array buffer offset
-			);
-		// Draw the triangle !
-		glDrawArrays(GL_TRIANGLES, 0, 3); // Starting from vertex 0; 3 vertices total -> 1 triangle
-		glDisableVertexAttribArray(0);
+	// Position attribute
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+	glEnableVertexAttribArray(0);
 
+	glBindVertexArray(0); // Unbind VAO
 
-		// Swap buffers
-		glfwSwapBuffers(window);
+	//Uniforms
+	GLint resolutionLocation = glGetUniformLocation(shaderProgram, "iResolution");
+	GLint gtimeLocation = glGetUniformLocation(shaderProgram, "iGlobalTime");
+	//GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+
+    // Game loop
+	while (!glfwWindowShouldClose(window))
+	{
+		// Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
 		glfwPollEvents();
-	}
 
+		// Render
+		// Clear the colorbuffer
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		// Be sure to activate the shader
+		glUseProgram(shaderProgram);
+
+		// Update the uniform color
+		GLfloat timeValue = glfwGetTime();
+		GLfloat greenValue = (sin(timeValue) / 2) + 0.5;
+		
+		//Update Uniforms
+		//glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+		glUniform3f(resolutionLocation, WIDTH, HEIGHT, 0.0f);
+		glUniform1f(gtimeLocation, glfwGetTime());
+
+		// Draw the triangle
+		glBindVertexArray(VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glBindVertexArray(0);
+
+		// Swap the screen buffers
+		glfwSwapBuffers(window);
+	}
+	// Properly de-allocate all resources once they've outlived their purpose
+	glDeleteVertexArrays(1, &VAO);
+	glDeleteBuffers(1, &VBO);
+	// Terminate GLFW, clearing any resources allocated by GLFW.
+	glfwTerminate();
+	return 0;
+}
+
+// Is called whenever a key is pressed/released via GLFW
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
+{
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, GL_TRUE);
 }
