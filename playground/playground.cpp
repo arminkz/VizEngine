@@ -15,7 +15,7 @@
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 // Window dimensions
-const GLuint WIDTH = 640, HEIGHT = 360;
+const GLuint WIDTH = 1280, HEIGHT = 720;
 
 // The MAIN function, from here we start the application and run the game loop
 int main()
@@ -44,7 +44,7 @@ int main()
 	glViewport(0, 0, WIDTH, HEIGHT);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint shaderProgram = LoadShaders("uniform_test_vert.glsl", "mandelbrot.glsl");
+	GLuint shaderProgram = LoadShaders("vert.glsl", "mandelbrot2.glsl");
 	fprintf(stdout, "Loaded Shader !\n");
 
 	// Set up vertex data (and buffer(s)) and attribute pointers

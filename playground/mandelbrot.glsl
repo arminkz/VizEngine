@@ -19,7 +19,8 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 	
 	float zoo = 1.0/250.0;
 	
-	zoo = 1.0/(400.0 - 150.0*sin(0.15*iGlobalTime-0.3));
+	//zoo = 1.0/(400.0 - 150.0*sin(0.15*iGlobalTime-0.3));
+	zoo = 1.0/(400.0 - 20.0*iGlobalTime);
 	
 	vec2 cc = vec2(-0.533516,0.526141) + p*zoo;
 
